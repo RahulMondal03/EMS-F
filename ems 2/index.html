@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoltGrid — Electricity Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <main class="page">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="brand" style="justify-content:center; margin-bottom:22px;">
+        <span class="bolt">⚡</span>
+        <span>VoltGrid<small>Electricity Management</small></span>
+      </div>
+      <h1>Power, billed and served<br /><span class="spark">without the friction.</span></h1>
+      <p>One place to view and pay bills, raise complaints, manage tariffs and
+         track resolutions — for customers, employees and administrators.</p>
+      <div class="current-line" aria-hidden="true"></div>
+    </section>
+
+    <!-- Portal chooser -->
+    <section class="grid cols-3 mt-3">
+      <div class="glass portal-card">
+        <div class="icon">🏠</div>
+        <h2>Customer</h2>
+        <p>View monthly bills, pay online in seconds, and follow your complaints
+           from “open” to “resolved”.</p>
+        <a class="btn btn-primary" href="customer/login.html">Customer login</a>
+      </div>
+
+      <div class="glass portal-card">
+        <div class="icon">🛠️</div>
+        <h2>Employee</h2>
+        <p>See the complaints assigned to you, look up customer accounts, and
+           update work status from the field.</p>
+        <a class="btn btn-primary" href="employee/login.html">Employee login</a>
+      </div>
+
+      <div class="glass portal-card">
+        <div class="icon">🗂️</div>
+        <h2>Admin</h2>
+        <p>Manage tariff policies, customers and staff, and route incoming
+           complaints to the right team.</p>
+        <a class="btn btn-primary" href="admin/login.html">Admin login</a>
+      </div>
+    </section>
+
+    <p class="muted center mt-3">
+      Demo credentials — customer: <strong>anita@example.com / anita123</strong> ·
+      employee: <strong>suresh@voltgrid.com / suresh123</strong> ·
+      admin: <strong>admin@voltgrid.com / admin123</strong>
+    </p>
+  </main>
+
+</body>
+</html>
