@@ -26,10 +26,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          # Enable Pages automatically (build type "workflow") on first run,
-          # so no manual toggle in repo settings is needed.
-          enablement: true
 
       - name: Upload site (the ems/ folder is the site root)
         uses: actions/upload-pages-artifact@v3
