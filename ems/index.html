@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volt Connect — Electricity Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <main class="page">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="brand" style="justify-content:center; margin-bottom:22px;">
+        <span class="bolt">⚡</span>
+        <span>Volt Connect<small>Electricity Management</small></span>
+      </div>
+      <div class="current-line" aria-hidden="true"></div>
+    </section>
+
+    <!-- Portal chooser -->
+    <section class="grid cols-3 mt-3">
+      <div class="glass portal-card">
+        <div class="icon">🏠</div>
+        <h2>Customer</h2>
+        <a class="btn btn-primary mt-1" href="customer/login.html">Customer login</a>
+      </div>
+
+      <div class="glass portal-card">
+        <div class="icon">🛠️</div>
+        <h2>Employee</h2>
+        <a class="btn btn-primary mt-1" href="employee/login.html">Employee login</a>
+      </div>
+
+      <div class="glass portal-card">
+        <div class="icon">🗂️</div>
+        <h2>Admin</h2>
+        <a class="btn btn-primary mt-1" href="admin/login.html">Admin login</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

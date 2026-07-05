@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaints — Volt Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+
+  <div id="appbar" data-role="customer"></div>
+
+  <main class="page">
+    <p class="eyebrow">Support</p>
+    <h1>Complaints</h1>
+
+    <div class="grid cols-2 mt-3" style="align-items:start;">
+
+      <!-- Left: file a new complaint -->
+      <section>
+        <h2 class="mb-2">New complaint</h2>
+        <div class="glass">
+          <div id="alert" class="alert success"></div>
+
+          <div class="field">
+            <label for="type">Complaint type</label>
+            <select id="type">
+              <option value="">Choose a category…</option>
+              <option>Power outage</option>
+              <option>Voltage fluctuation</option>
+              <option>Billing dispute</option>
+              <option>Meter fault</option>
+              <option>Damaged line / pole</option>
+              <option>Other</option>
+            </select>
+            <div class="error-msg"></div>
+          </div>
+
+          <div class="field">
+            <label for="description">Describe the issue</label>
+            <textarea id="description" placeholder="When did it start? How often does it happen? Any landmarks near the fault?"></textarea>
+            <div class="error-msg"></div>
+          </div>
+
+          <button id="submitBtn" class="btn btn-primary">Submit complaint</button>
+        </div>
+      </section>
+
+      <!-- Right: your existing complaints and their status -->
+      <section>
+        <h2 class="mb-2">My complaints</h2>
+        <div id="complaintList" class="grid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/appbar.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/customer/registerComplaint.js"></script>
+</body>
+</html>

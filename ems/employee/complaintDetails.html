@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complaint details — Volt Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+
+  <div id="appbar" data-role="employee"></div>
+
+  <main class="page" style="max-width:860px;">
+    <p class="eyebrow">Complaint</p>
+    <h1 id="title">Complaint</h1>
+    <p class="muted mb-2" id="subtitle"></p>
+
+    <div class="grid cols-2" style="align-items:start;">
+      <div class="glass">
+        <h2 class="mb-2">Details</h2>
+        <div class="bill-summary" id="detailRows"></div>
+        <a id="updateLink" class="btn btn-primary mt-3" href="#">Update status</a>
+      </div>
+
+      <div class="glass">
+        <h2 class="mb-2">Timeline</h2>
+        <ul class="timeline" id="timeline"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/appbar.js"></script>
+  <script src="../js/employee/complaintDetails.js"></script>
+</body>
+</html>

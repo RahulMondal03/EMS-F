@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My bills — Volt Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+
+  <div id="appbar" data-role="customer"></div>
+
+  <main class="page">
+    <p class="eyebrow">Billing</p>
+    <h1>View &amp; pay bills</h1>
+
+    <div class="glass">
+      <div class="table-wrap">
+        <table class="glass-table">
+          <thead>
+            <tr><th>Bill ID</th><th>Month</th><th>Units</th><th>Amount</th><th>Due date</th><th>Status</th><th></th></tr>
+          </thead>
+          <tbody id="billRows"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/appbar.js"></script>
+  <script src="../js/customer/viewPayBill.js"></script>
+</body>
+</html>

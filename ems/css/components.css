@@ -1,0 +1,242 @@
+/* ============================================================
+   VoltGrid — component styles (corporate edition)
+   Tables, badges, alerts, timeline, hero, portal cards,
+   payment UI and the credit-card preview.
+   ============================================================ */
+
+/* ---------- Tables ---------- */
+.table-wrap { overflow-x: auto; border-radius: var(--radius-sm); }
+
+table.glass-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .92rem;
+}
+.glass-table thead th {
+  text-align: left;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.glass-table tbody td { padding: 13px 14px; border-bottom: 1px solid var(--border); }
+.glass-table tbody tr { transition: background .15s; }
+.glass-table tbody tr:hover { background: var(--surface-2); }
+.glass-table tbody tr:last-child td { border-bottom: none; }
+.glass-table td strong { color: var(--ink); }
+.glass-table .empty td { text-align: center; color: var(--ink-soft); padding: 30px 14px; }
+
+/* inline selects inside tables (admin "assign to" dropdown) */
+.glass-table select {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  font: 500 .85rem var(--font-body);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+/* ---------- Badges — flat tinted status chips with a dot ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 11px;
+  border-radius: 99px;
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  border: 1px solid transparent;
+}
+.badge::before {                    /* the status dot */
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.badge.open        { color: #92600a; background: #fef3c7; border-color: #fde68a; }
+.badge.assigned    { color: #1e5a8a; background: #dbeafe; border-color: #bfdbfe; }
+.badge.in-progress { color: #6d28d9; background: #ede9fe; border-color: #ddd6fe; }
+.badge.resolved,
+.badge.paid        { color: #166534; background: #dcfce7; border-color: #bbf7d0; }
+.badge.unpaid,
+.badge.overdue     { color: #b91c1c; background: #fee2e2; border-color: #fecaca; }
+
+/* ---------- Alerts ---------- */
+.alert {
+  display: none;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+  font-weight: 500;
+  margin: 14px 0;
+  border: 1px solid transparent;
+}
+.alert.show { display: block; }
+.alert.success { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
+.alert.error   { background: #fee2e2; color: #b91c1c; border-color: #fecaca; }
+
+/* ---------- Timeline (complaint history) ---------- */
+.timeline { list-style: none; margin-top: 14px; }
+.timeline li { position: relative; padding: 0 0 22px 30px; }
+.timeline li::before {              /* node */
+  content: "";
+  position: absolute;
+  left: 0; top: 4px;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--border-strong);
+}
+.timeline li::after {               /* connecting rail */
+  content: "";
+  position: absolute;
+  left: 5px; top: 18px; bottom: -2px;
+  width: 2px;
+  background: var(--border);
+}
+.timeline li:last-child::after { display: none; }
+.timeline .t-when { font-size: .74rem; color: var(--ink-soft); letter-spacing: .02em; }
+.timeline .t-what { font-weight: 600; color: var(--ink); margin-top: 2px; }
+.timeline .t-note { font-size: .88rem; color: var(--ink-soft); margin-top: 3px; }
+
+/* ---------- Landing hero ---------- */
+.hero { text-align: center; padding: 64px 18px 28px; }
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  max-width: 760px;
+  margin: 20px auto 0;
+}
+.hero h1 .spark { color: var(--accent); }
+.hero p {
+  max-width: 540px;
+  margin: 16px auto 0;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+/* simple hairline divider */
+.current-line {
+  width: min(340px, 60%);
+  height: 1px;
+  margin: 36px auto;
+  background: var(--border);
+}
+
+/* ---------- Portal cards (landing) ---------- */
+.portal-card {
+  text-align: center;
+  padding: 32px 24px;
+  cursor: default;
+}
+.portal-card .icon {
+  display: grid;
+  place-items: center;
+  width: 52px; height: 52px;
+  margin: 0 auto 16px;
+  font-size: 1.4rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.portal-card p { color: var(--ink-soft); font-size: .92rem; margin: 10px 0 20px; }
+
+/* ---------- Bill summary (payment pages) ---------- */
+.bill-summary { margin: 6px 0 20px; }
+.bill-summary .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 4px;
+  font-size: .94rem;
+  border-bottom: 1px solid var(--border);
+}
+.bill-summary .row:last-child { border-bottom: none; }
+.bill-summary .row.total {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.12rem;
+  color: var(--ink);
+}
+
+/* ---------- Payment method picker ---------- */
+.method-pick { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0 22px; }
+.method-pick label {
+  position: relative;
+  display: block;
+  padding: 16px 14px;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color .18s ease, background .18s ease,
+              transform .18s ease, box-shadow .18s ease;
+}
+.method-pick label:hover { border-color: var(--accent); transform: translateY(-1px); }
+.method-pick input { position: absolute; opacity: 0; }
+.method-pick input:checked + span { color: var(--accent-hi); }
+.method-pick label:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, .12);
+  transform: translateY(-1px);
+}
+
+/* ---------- Success check ---------- */
+.success-check {
+  display: grid;
+  place-items: center;
+  width: 72px; height: 72px;
+  margin: 0 auto 18px;
+  font-size: 1.9rem;
+  color: #fff;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ---------- Credit-card preview ---------- */
+.card-preview {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1.62;
+  margin: 0 auto 24px;
+  padding: 24px;
+  border-radius: var(--radius);
+  color: #e2e8f0;
+  font-family: var(--font-display);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #1e3a8a;
+  border: 1px solid #1e40af;
+}
+.card-preview::after {              /* chip */
+  content: "";
+  position: absolute;
+  top: 58px; left: 24px;
+  width: 40px; height: 30px;
+  border-radius: 6px;
+  background: #cbb26b;
+}
+.card-preview .num {
+  font-size: clamp(1.05rem, 4vw, 1.3rem);
+  letter-spacing: .14em;
+  margin-top: 56px;
+}
+.card-preview .meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: .78rem;
+  letter-spacing: .04em;
+  opacity: .85;
+}
